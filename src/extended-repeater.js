@@ -24,16 +24,16 @@ function repeater(str, options) {
   const additionSeparator = options.additionSeparator !== undefined ? options.additionSeparator : '|';
 
   if (!repeatTimes) {
-     return `${str}${addition}`;
+    return `${str}${addition}`;
   }
 
   for (let i = 0; i < repeatTimes; i++) {
-     let additionResult = '';
-     for (let j = 0; j < additionRepeatTimes; j++) {
-        additionResult += addition + additionSeparator;
-     }
-     additionResult = additionResult.split('').splice(0, additionResult.length - additionSeparator.length).join('');
-     result += str + additionResult + separator;
+    let additionResult = '';
+    for (let j = 0; j < additionRepeatTimes; j++) {
+      additionResult += addition + additionSeparator;
+    }
+    additionResult = additionResult.split('').splice(0, additionResult.length - additionSeparator.length).join('');
+    result += str + additionResult + separator;
   }
 
   result = result.split('').splice(0, result.length - separator.length).join('');
