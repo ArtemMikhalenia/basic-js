@@ -20,7 +20,6 @@ const chainMaker = {
     if (typeof position !== 'number' ||
       position < 1 ||
       position > this.result.length ||
-      typeof position !== "number" ||
       Math.floor(position) !== position
     ) {
       this.result = [];
